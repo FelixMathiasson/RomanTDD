@@ -18,8 +18,12 @@ public class RomanTranslator {
 		int current = 0;
 		for(int i = number.length() - 1; i >= 0; i--)
 		{
-			char c = number.charAt(i);
-			current = values[Arrays.binarySearch(romans, c)];
+			int index = Arrays.binarySearch(romans, number.charAt(i)); 
+			if(index < 0)
+			{
+				return -1;
+			}
+			current = values[index];
 			if(current < previous)
 			{
 				result -= current;

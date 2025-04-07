@@ -65,5 +65,18 @@ class RomanTranslatorTests {
 	    assertEquals(3999, rTranslator.translateRomanToDecimal("MMMCMXCIX")); // 3999 = 1000 + 1000 + 1000 + 900 + 90 + 9
 	}
 	
-	
+	@Test
+	void testBadInputData() //throw invalid input at the method
+	{
+	    RomanTranslator rTranslator = new RomanTranslator();
+	    
+	    //testing blank input
+	    assertEquals(0, rTranslator.translateRomanToDecimal(""));
+	    
+	    //testing illegal characters
+	    assertEquals(-1, rTranslator.translateRomanToDecimal("ABC"));
+	    assertEquals(-1, rTranslator.translateRomanToDecimal(".,-"));
+
+
+	}
 }
