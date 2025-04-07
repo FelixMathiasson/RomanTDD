@@ -31,5 +31,18 @@ class RomanTranslatorTests {
 		int result = rTranslator.translateRomanToDecimal("V");
 		assertEquals(expected, result);
 	}
+	
+	@Test
+	void testCompositeRomanNumerals() // things like "IV" or "VI"
+	{
+		RomanTranslator rTranslator = new RomanTranslator();
+		int expected = 6;
+		int result = rTranslator.translateRomanToDecimal("VI");
+		assertEquals(expected, result);
+		
+		expected = 4;
+		result = rTranslator.translateRomanToDecimal("IV");
+		assertEquals(expected, result);
+	}
 
 }
