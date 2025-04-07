@@ -10,8 +10,8 @@ public class RomanTranslator {
 	
 	public int translateRomanToDecimal(String number) 
 	{
-		char romans[] = {'I', 'V', 'X'};
-		int values[] = {1, 5, 10};
+		char romans[] = {'C', 'D', 'I', 'L', 'M', 'V', 'X'}; 
+	    int values[] = {100, 500, 1, 50, 1000, 5, 10}; 
  		
 		int result = 0;
 		int previous = 0;
