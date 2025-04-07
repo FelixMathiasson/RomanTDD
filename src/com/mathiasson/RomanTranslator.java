@@ -9,7 +9,10 @@ public class RomanTranslator {
 	public int translateRomanToDecimal(String number) 
 	{
 		int result = 0;
-		if(number == "I") result = 1;
+		for(int i = 0; i < number.length(); i++)
+		{
+			if(number.charAt(i) == 'I') result++;
+		}
 		return result;
 	} 
 }
