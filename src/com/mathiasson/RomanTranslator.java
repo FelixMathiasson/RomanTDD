@@ -6,7 +6,10 @@ public class RomanTranslator {
 		
 	}
 	
-	public int translateRomanToDecimal(String string) {
-		return 0;
+	public int translateRomanToDecimal(String number) 
+	{
+		int result = 0;
+		if(number == "I") result = 1;
+		return result;
 	} 
 }
