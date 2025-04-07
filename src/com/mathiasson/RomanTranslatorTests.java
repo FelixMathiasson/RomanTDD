@@ -8,20 +8,28 @@ class RomanTranslatorTests {
 	@Test
 	void testRomanOne() // tests I
 	{
-		RomanTranslator rt = new RomanTranslator();
+		RomanTranslator rTranslator = new RomanTranslator();
 		int expected = 1;
-		int result = rt.translateRomanToDecimal("I");
+		int result = rTranslator.translateRomanToDecimal("I");
 		assertEquals(expected, result);
 	}
 	
 	@Test
 	void testRomanTwo() //tests II
 	{
-		RomanTranslator rt = new RomanTranslator();
+		RomanTranslator rTranslator = new RomanTranslator();
 		int expected = 2;
-		int result = rt.translateRomanToDecimal("II");
+		int result = rTranslator.translateRomanToDecimal("II");
 		assertEquals(expected, result);
 	}
 	
+	@Test
+	void testRomanV() //tests if the program can handle roman 5 "V"
+	{
+		RomanTranslator rTranslator = new RomanTranslator();
+		int expected = 5;
+		int result = rTranslator.translateRomanToDecimal("V");
+		assertEquals(expected, result);
+	}
 
 }

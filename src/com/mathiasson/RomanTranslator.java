@@ -12,6 +12,7 @@ public class RomanTranslator {
 		for(int i = 0; i < number.length(); i++)
 		{
 			if(number.charAt(i) == 'I') result++;
+			else if(number.charAt(i) == 'V')result+=5;
 		}
 		return result;
 	} 
