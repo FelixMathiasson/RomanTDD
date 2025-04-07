@@ -5,14 +5,13 @@ import java.util.Arrays;
 public class RomanTranslator {
 	public static void main(String[] args)
 	{
-		RomanTranslator translator = new RomanTranslator();
-		int x = translator.translateRomanToDecimal("V");
+		
 	}
 	
 	public int translateRomanToDecimal(String number) 
 	{
-		char romans[] = {'I', 'V'};
-		int values[] = {1, 5};
+		char romans[] = {'I', 'V', 'X'};
+		int values[] = {1, 5, 10};
  		
 		int result = 0;
 		int previous = 0;

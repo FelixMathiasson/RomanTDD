@@ -44,5 +44,21 @@ class RomanTranslatorTests {
 		result = rTranslator.translateRomanToDecimal("IV");
 		assertEquals(expected, result);
 	}
-
+	
+	@Test
+	void testTensNumerals() // things like "IX" or "X" 
+	{
+		RomanTranslator rTranslator = new RomanTranslator();
+		int expected = 10;
+		int result = rTranslator.translateRomanToDecimal("X");
+		assertEquals(expected, result);
+		
+		expected = 9;
+		result = rTranslator.translateRomanToDecimal("IX");
+		assertEquals(expected, result);
+		
+		expected = 15;
+		result = rTranslator.translateRomanToDecimal("XV");
+		assertEquals(expected, result);
+	}
 }
