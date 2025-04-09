@@ -73,10 +73,13 @@ class RomanTranslatorTests {
 	    //testing blank input
 	    assertEquals(0, rTranslator.translateRomanToDecimal(""));
 	    
+	 
+	    String nullInput = null;
+	    assertEquals(-1, rTranslator.translateRomanToDecimal(nullInput));
+	    
 	    //testing illegal characters
 	    assertEquals(-1, rTranslator.translateRomanToDecimal("ABC"));
 	    assertEquals(-1, rTranslator.translateRomanToDecimal(".,-"));
-
-
 	}
+	
 }
